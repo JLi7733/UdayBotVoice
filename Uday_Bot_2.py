@@ -76,4 +76,4 @@ async def say(ctx, *, text):
         await voiceGen("UH OH STINKY!.")
         await ctx.send("testing here")
 
-bot.run("OTY3NTgyNDgzNzYxNzUwMDU3.GlC6ti.qkILAi22SfhT1Qxyf85QySRnP_s9_EvkUfbHZ0")
+bot.run(discordKey)
