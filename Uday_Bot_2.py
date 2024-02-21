@@ -10,6 +10,7 @@ set_api_key(os.getenv('ELEVENLABS_API_KEY'))
 discordKey = os.getenv('DISCORD_API_KEY')
 voices = voices()
 
+#Function to generate the mp3 file we use
 async def voiceGen(text):
     audio_stream = generate(
         text=text,
@@ -17,9 +18,6 @@ async def voiceGen(text):
         voice="Uday-Normal"
     )
     save(audio_stream, filename="line.mp3")
-
-
-
 
 #Set up the discord client
 
@@ -38,6 +36,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'Voice module is ready as {bot.user.name}')
 
+#play pre-recorded voicelines
 @bot.command()
 async def play(ctx, *, file_name):
     if ctx.author.voice:
@@ -55,6 +54,7 @@ async def play(ctx, *, file_name):
     else:
         await ctx.send("Go into a voice channel")
 
+#Say whatever we want
 @bot.command()
 async def say(ctx, *, text):
     try:
