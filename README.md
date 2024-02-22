@@ -22,4 +22,5 @@ feature before discord implemented the soundboard. Nowadays it also helps bypass
 # Future Plans
 - Implementing OpenAI's ChatGPT in order to allow for Uday bot to respond dynamically to questions.
 - Looking into possibly streaming the audio directly to discord in order to make the TTS quicker for long paragraphs of text
+- Linking into other APIs, just for personal interest
 
