@@ -82,7 +82,14 @@ async def help(ctx):
 
 @bot.command()
 async def voice(ctx):
+    def remove_extension(filename):
+        # Split the filename by '.' and remove the last part (which is the extension)
+        return '.'.join(filename.split('.')[:-1])
+    playTriggers = "Here are the existing voicelines you can say: "
+    for filename in os.listdir("voicelines"):
+        playTriggers+=(remove_extension(filename) + ", ")
     await ctx.send("There are two commands, !say to generate a new line or !play to play an existing line")
+    await ctx.send(playTriggers)
 
 @bot.command()
 async def text(ctx):
