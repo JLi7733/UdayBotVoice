@@ -133,4 +133,4 @@ async def say(ctx, *, text):
     else:
         await ctx.send("Go into a voice channel")
 
-bot.run("OTY3NTgyNDgzNzYxNzUwMDU3.GQlIFT.GbpwddCjCudqGVuGqDs3JyfEvKioFN11hCdGrQ")
+bot.run(discordKey)
